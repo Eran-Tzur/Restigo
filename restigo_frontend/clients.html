@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Clients</title>
+</head>
+
+<body>
+  <ul>
+    <li><a href="/">Items</a></li>
+    <li><a href="../clients.html">Clients</a></li>
+    <li><a href="../diversities.html">Diversities</a></li>
+  </ul>
+  <h1>Clients</h1>
+  <div class="button-div">
+    <button class="add-toggle">+</button>
+    ADD NEW CLIENTS
+  </div>
+  <form class="hide" id="client-add-form" action="#" novalidate>
+    <h2>
+      ADD NEW CLIENTS
+    </h2>
+
+    <div class="container">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" />
+      <p class="danger"></p>
+      <label>Type</label>
+      <input type="radio" name="type" value="1" checked>resturant
+      <input type="radio" name="type" value="2">coffe house
+      <input type="radio" name="type" value="3">bar
+      <p class="danger"></p>
+      <label>Enable</label>
+      <input type="radio" name="enable" value="Yes" checked>Yes
+      <input type="radio" name="enable" value="No">No
+      <p class="danger"></p>
+      <!-- -------------------------------- -->
+      <h3>Diversities :</h3>
+      <div id="add_diversiti_clients">
+
+      </div>
+      <!-- -------------------------------- -->
+      <input type="submit" value="SAVE">
+      <p class="danger"></p>
+    </div>
+  </form>
+
+  <div class="button-div">
+    <button class="list-toggle">+</button>
+    CLIENTS LIST
+  </div>
+
+  <table class="hide">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Enable</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody class="clients-lists">
+
+    </tbody>
+  </table>
+
+  <div class="popup-overlay">
+    <form id="client-edit-form" action="#" novalidate>
+      <br>
+      <h2>
+        EDIT CLIENT
+      </h2>
+
+      <div class="container">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="edit_name" />
+        <p class="danger"></p>
+        <label>Type</label>
+        <input type="radio" name="edit_type" value="1">resturant
+        <input type="radio" name="edit_type" value="2">coffe house
+        <input type="radio" name="edit_type" value="3">bar
+        <p class="danger"></p>
+        <label>Enable</label>
+        <input type="radio" name="edit_enable" value="Yes">yes
+        <input type="radio" name="edit_enable" value="No">no
+        <p class="danger"></p>
+        <!-- -------------------------------- -->
+        <h3>Diversities :</h3>
+        <div id="edit_diversiti_clients">
+
+        </div>
+        <!-- -------------------------------- -->
+        <input type="submit" id="submit" value="SAVE">
+        <input type="button" id="close" value="CANCEL">
+        <p class="danger"></p>
+      </div>
+    </form>
+  </div>
+
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/validation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Items</title>
+</head>
+
+<body>
+  <ul>
+    <li><a href="/">Items</a></li>
+    <li><a href="../clients.html">Clients</a></li>
+    <li><a href="../diversities.html">Diversities</a></li>
+  </ul>
+  <h1>Items</h1>
+  <div class="button-div">
+    <button class="add-toggle">+</button>
+    ADD NEW ITEM
+  </div>
+  <form class="hide" id="item-add-form" action="#" novalidate>
+    <h2>
+      ADD NEW ITEM
+    </h2>
+
+    <div class="container">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" />
+      <p class="danger"></p>
+      <label for="catalog_number">Catalog Number</label>
+      <input type="number" name="catalog_number" id="catalog_number" />
+      <p class="danger"></p>
+      <label for="price">Price</label>
+      <input type="number" name="price" id="price" />
+      <p class="danger"></p>
+      <label>Enable</label>
+      <input type="radio" name="enable" value="Yes" checked>Yes
+      <input type="radio" name="enable" value="No">No
+      <p class="danger"></p>
+      <label>Has vat</label>
+      <input type="radio" name="has_vat" value="Yes" checked>Yes
+      <input type="radio" name="has_vat" value="No">No
+      <p class="danger"></p>
+      <!-- -------------------------------- -->
+      <h3>Items :</h3>
+      <div id="item_diversities">
+
+      </div>
+      <!-- -------------------------------- -->
+      <input type="submit" value="SAVE">
+      <p class="danger"></p>
+    </div>
+  </form>
+
+  <div class="button-div">
+    <button class="list-toggle">+</button>
+    ITEM LIST
+  </div>
+
+  <table class="hide">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Catalog Number</th>
+        <th>Price</th>
+        <th>Enable</th>
+        <th>Has vat</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody class="item-list">
+
+    </tbody>
+  </table>
+
+  <div class="popup-overlay">
+    <form id="item-edit-form" action="#" novalidate>
+      <br>
+      <h2>
+        EDIT ITEM
+      </h2>
+
+      <div class="container edit">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="edit_name" />
+        <p class="danger"></p>
+        <label for="catalog_number">Catalog Number</label>
+        <input type="number" name="catalog_number" id="edit_catalog_number" />
+        <p class="danger"></p>
+        <label for="price">Price</label>
+        <input type="number" name="price" id="edit_price" />
+        <p class="danger"></p>
+        <label>Enable</label>
+        <input type="radio" name="edit_enable" value="Yes">Yes
+        <input type="radio" name="edit_enable" value="No">No
+        <p class="danger"></p>
+        <label>Has vat</label>
+        <input type="radio" name="edit_has_vat" value="Yes">Yes
+        <input type="radio" name="edit_has_vat" value="No">No
+        <p class="danger"></p>
+        <!-- -------------------------------- -->
+        <h3>Diversities :</h3>
+        <div id="edit_item_diversities">
+
+        </div>
+
+        <!-- -------------------------------- -->
+        <input type="submit" value="SAVE">
+        <input type="button" id="close" value="CANCEL">
+        <p class="danger"></p>
+      </div>
+    </form>
+  </div>
+
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/validation.js"></script>
+
+</body>
+
+</html>
